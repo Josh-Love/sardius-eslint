@@ -1,0 +1,27 @@
+{
+  "name": "eslint-config-sardius",
+  "version": "1.0.0",
+  "description": "Base eslint config for all Sardius projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Josh-Love@github.com/Josh-Love/sardius-eslint.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "sardius",
+    "sardius",
+    "media",
+    "sardiusmedia"
+  ],
+  "author": "Sardius Media",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josh-Love/sardius-eslint/issues"
+  },
+  "homepage": "https://github.com/Josh-Love/sardius-eslint#readme"
+}
