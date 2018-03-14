@@ -1,19 +1,13 @@
-// Default eslint rules. This is for backend
-
 module.exports = {
 
-  globals: {},
+  "plugins": ["react"],
 
-  parser: "babel-eslint",
-
-  plugins: ["react"],
-
-  env: {
+  "env": {
     "browser": true,
-    "jquery": true,
+    "jquery": true
   },
 
-  rules: {
+  "rules": {
     "jsx-quotes": 1,
     "react/display-name": 0,
     "react/forbid-prop-types": 0,
@@ -51,17 +45,17 @@ module.exports = {
     "react/sort-comp": 1
   },
 
-  parserOptions: {
+  "parserOptions": {
     "ecmaVersion": 7,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
       "modules": true,
       "experimentalObjectRestSpread": true,
-      "experimentalDecorators": true,
+      "experimentalDecorators": true
     }
   },
 
-  extends: "sardius",
+  "extends": "sardius"
 
 };

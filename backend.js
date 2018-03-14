@@ -1,28 +1,22 @@
-// Base eslint that should apply to all projects
-
 module.exports = {
 
-  globals: {},
-
-  plugins: [],
-
-  env: {
+  "env": {
     "node": true,
-    "shared-node-browser": true,
+    "shared-node-browser": true
   },
 
-  rules: {},
+  "rules": {},
 
-  parserOptions: {
+  "parserOptions": {
     "ecmaVersion": 7,
     "sourceType": "module",
     "ecmaFeatures": {
       "modules": true,
       "experimentalObjectRestSpread": true,
-      "experimentalDecorators": true,
+      "experimentalDecorators": true
     }
   },
 
-  extends: "sardius",
+  "extends": "sardius"
 
 };
