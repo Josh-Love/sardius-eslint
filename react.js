@@ -8,7 +8,7 @@ module.exports = {
   },
 
   "rules": {
-    "jsx-quotes": 1,
+    "jsx-quotes": ["error", "prefer-single"],
     "react/display-name": 0,
     "react/forbid-prop-types": 0,
     "react/jsx-boolean-value": 1,
