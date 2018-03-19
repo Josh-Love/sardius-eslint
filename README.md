@@ -107,49 +107,123 @@ Used for reactJS environments
 #### Configuration
 Extends the base package, and adds the following:
 ```javascript
-"plugins": ["react"],
+"plugins": ["react", "redux-saga"],
 
 "env": {
   "browser": true,
   "jquery": true
 },
 
+"extends": ["sardius", "plugin:redux-saga/recommended"]
+
 "rules": {
-  "jsx-quotes": ["error", "prefer-single"],
-  "react/display-name": 0,
-  "react/forbid-prop-types": 0,
-  "react/jsx-boolean-value": 1,
-  "react/jsx-closing-bracket-location": 1,
-  "react/jsx-curly-spacing": 1,
-  "react/jsx-handler-names": 1,
-  "react/jsx-indent-props": [2, 2],
-  "react/jsx-indent": [2, 2],
-  "react/jsx-key": 1,
-  "react/jsx-max-props-per-line": 0,
-  "react/jsx-no-bind": 0,
-  "react/jsx-no-duplicate-props": 1,
-  "react/jsx-no-literals": 0,
-  "react/jsx-no-undef": 1,
-  "react/jsx-pascal-case": 1,
-  "react/jsx-sort-prop-types": 0,
-  "react/jsx-sort-props": 0,
-  "react/jsx-uses-react": 1,
-  "react/jsx-uses-vars": 1,
-  "react/no-danger": 1,
-  "react/no-deprecated": 1,
-  "react/no-did-mount-set-state": 1,
-  "react/no-did-update-set-state": 1,
-  "react/no-direct-mutation-state": 1,
-  "react/no-is-mounted": 1,
-  "react/no-multi-comp": 0,
-  "react/no-set-state": 0,
-  "react/no-string-refs": 0,
-  "react/no-unknown-property": 1,
-  "react/prefer-es6-class": 1,
-  "react/prop-types": 0,
-  "react/react-in-jsx-scope": 1,
-  "react/self-closing-comp": 1,
-  "react/sort-comp": 1
+  'jsx-quotes': ['error', 'prefer-double'],
+  'class-methods-use-this': ['error', {
+    exceptMethods: [
+      'render',
+      'getInitialState',
+      'getDefaultProps',
+      'getChildContext',
+      'componentWillMount',
+      'componentDidMount',
+      'componentWillReceiveProps',
+      'shouldComponentUpdate',
+      'componentWillUpdate',
+      'componentDidUpdate',
+      'componentWillUnmount'
+    ]
+  }],
+  'react/display-name': ['off', { ignoreTranspilerName: false }],
+  'react/forbid-prop-types': ['error', { forbid: ['any', 'array', 'object'] }],
+  'react/jsx-boolean-value': ['error', 'never'],
+  'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
+  'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
+  'react/jsx-handler-names': ['off', {
+    eventHandlerPrefix: 'handle',
+    eventHandlerPropPrefix: 'on'
+  }],
+  'react/jsx-indent-props': ['error', 2],
+  'react/jsx-key': 'off',
+  'react/jsx-max-props-per-line': ['off', { maximum: 1 }],
+  'react/jsx-no-bind': ['error', {
+    ignoreRefs: true,
+    allowArrowFunctions: true,
+    allowBind: false
+  }],
+  'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
+  'react/jsx-no-literals': 'off',
+  'react/jsx-no-undef': 'error',
+  'react/jsx-pascal-case': ['error', {
+    allowAllCaps: true,
+    ignore: []
+  }],
+  'react/sort-prop-types': ['off', {
+    ignoreCase: true,
+    callbacksLast: false,
+    requiredFirst: false
+  }],
+  'react/jsx-sort-prop-types': 'off',
+  'react/jsx-sort-props': ['off', {
+    ignoreCase: true,
+    callbacksLast: false,
+    shorthandFirst: false,
+    shorthandLast: false
+  }],
+  'react/jsx-uses-react': ['error'],
+  'react/jsx-uses-vars': 'error',
+  'react/no-danger': 'warn',
+  'react/no-deprecated': ['error'],
+  'react/no-did-mount-set-state': ['error'],
+  'react/no-did-update-set-state': ['error'],
+  'react/no-direct-mutation-state': 'off',
+  'react/no-is-mounted': 'error',
+  'react/no-multi-comp': ['error', { ignoreStateless: true }],
+  'react/no-set-state': 'off',
+  'react/no-string-refs': 'error',
+  'react/no-unknown-property': 'error',
+  'react/prefer-es6-class': ['error', 'always'],
+  'react/prefer-stateless-function': 'error',
+  'react/prop-types': ['error', { ignore: [], customValidators: [], skipUndeclared: true }],
+  'react/react-in-jsx-scope': 'error',
+  'react/require-extension': ['off', { extensions: ['.jsx', '.js'] }],
+  'react/require-render-return': 'error',
+  'react/self-closing-comp': 'error',
+  'react/jsx-space-before-closing': ['error', 'always'],
+  'react/sort-comp': ['error', {
+    order: [
+      'static-methods',
+      'lifecycle',
+      '/^on.+$/',
+      '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
+      'everything-else',
+      '/^render.+$/',
+      'render'
+    ]
+  }],
+  'react/jsx-wrap-multilines': ['error', {
+    declaration: true,
+    assignment: true,
+    return: true
+  }],
+  'react/wrap-multilines': 'off',
+  'react/jsx-first-prop-new-line': ['error', 'multiline'],
+  'react/jsx-equals-spacing': ['error', 'never'],
+  'react/jsx-no-target-blank': 'error',
+  'react/jsx-no-comment-textnodes': 'error',
+  'react/no-comment-textnodes': 'off', // deprecated version
+  'react/no-render-return-value': 'error',
+  'react/require-optimization': ['off', { allowDecorators: [] }],
+  'react/no-find-dom-node': 'error',
+  'react/forbid-component-props': ['off', { forbid: [] }],
+  'react/no-danger-with-children': 'error',
+  'react/no-unused-prop-types': ['error', {
+    customValidators: [
+    ],
+    skipShapeProps: false
+  }],
+  'react/style-prop-object': 'error',
+  'react/no-unescaped-entities': 'error',
+  'react/no-children-prop': 'error'
 },
 
 "parserOptions": {
