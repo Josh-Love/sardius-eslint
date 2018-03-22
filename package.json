@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sardius",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Base eslint config for all Sardius projects",
   "main": "index.js",
   "scripts": {
