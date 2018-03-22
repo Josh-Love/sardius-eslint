@@ -18,7 +18,9 @@ module.exports = {
       "prefer": {
         "returns": "return"
       }
-    }]
+    }],
+    "padded-blocks": ["error", { "classes": "always" }],
+    "no-trailing-spaces": 0
   },
 
   "parserOptions": {

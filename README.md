@@ -44,7 +44,9 @@ The default configuration. The rest of the configurations extend these options.
     "prefer": {
       "returns": "return"
     }
-  }]
+  }],
+  "padded-blocks": ["error", { "classes": "always" }],
+  "no-trailing-spaces": 0
 },
 
 "parserOptions": {
