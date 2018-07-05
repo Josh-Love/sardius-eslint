@@ -1,6 +1,6 @@
 module.exports = {
 
-  "plugins": ["react", "redux-saga"],
+  "plugins": ["react"],
 
   "env": {
     "browser": true,
@@ -128,6 +128,6 @@ module.exports = {
     }
   },
 
-  "extends": ["sardius", "plugin:redux-saga/recommended"]
+  "extends": ["sardius"]
 
 };

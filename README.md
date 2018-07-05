@@ -109,14 +109,14 @@ Used for reactJS environments
 #### Configuration
 Extends the base package, and adds the following:
 ```javascript
-"plugins": ["react", "redux-saga"],
+"plugins": ["react"],
 
 "env": {
   "browser": true,
   "jquery": true
 },
 
-"extends": ["sardius", "plugin:redux-saga/recommended"]
+"extends": ["sardius"]
 
 "rules": {
   'jsx-quotes': ['error', 'prefer-double'],
@@ -237,5 +237,27 @@ Extends the base package, and adds the following:
     "experimentalObjectRestSpread": true,
     "experimentalDecorators": true
   }
+}
+```
+### Redux Saga
+Used for reactJS environments that uses redux saga
+#### Setup
+.eslintrc
+```javascript
+"extends": "sardius/redux-saga"
+```
+#### Configuration
+Extends the base package, and adds the following:
+```javascript
+{
+
+  "plugins": ["redux-saga"],
+
+  "env": {},
+
+  "rules": {},
+
+  "extends": ["sardius/react", "plugin:redux-saga/recommended"]
+
 }
 ```
