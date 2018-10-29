@@ -79,9 +79,7 @@ module.exports = {
     'react/require-extension': ['off', { extensions: ['.jsx', '.js'] }],
     'react/require-render-return': 'error',
     'react/self-closing-comp': 'error',
-    'react/jsx-tag-spacing': {
-      beforeSelfClosing: 1
-    },
+    'react/jsx-tag-spacing': 'warn',
     'react/sort-comp': ['error', {
       order: [
         'static-methods',
