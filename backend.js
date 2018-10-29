@@ -8,11 +8,8 @@ module.exports = {
   "rules": {},
 
   "parserOptions": {
-    "ecmaVersion": 7,
-    "sourceType": "module",
     "ecmaFeatures": {
       "modules": true,
-      "experimentalObjectRestSpread": true,
       "experimentalDecorators": true
     }
   },

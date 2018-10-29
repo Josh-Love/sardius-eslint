@@ -79,7 +79,9 @@ module.exports = {
     'react/require-extension': ['off', { extensions: ['.jsx', '.js'] }],
     'react/require-render-return': 'error',
     'react/self-closing-comp': 'error',
-    'react/jsx-space-before-closing': ['error', 'always'],
+    'react/jsx-tag-spacing': {
+      beforeSelfClosing: 1
+    },
     'react/sort-comp': ['error', {
       order: [
         'static-methods',
@@ -118,12 +120,9 @@ module.exports = {
   },
 
   "parserOptions": {
-    "ecmaVersion": 7,
-    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
       "modules": true,
-      "experimentalObjectRestSpread": true,
       "experimentalDecorators": true
     }
   },
