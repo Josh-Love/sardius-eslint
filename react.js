@@ -1,6 +1,6 @@
 module.exports = {
 
-  "plugins": ["react"],
+  "plugins": ["react", "react-hooks"],
 
   "env": {
     "browser": true,
@@ -114,7 +114,9 @@ module.exports = {
     }],
     'react/style-prop-object': 'error',
     'react/no-unescaped-entities': 'error',
-    'react/no-children-prop': 'error'
+    'react/no-children-prop': 'error',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn'
   },
 
   "parserOptions": {

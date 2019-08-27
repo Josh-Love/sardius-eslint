@@ -106,7 +106,7 @@ Used for reactJS environments
 #### Configuration
 Extends the base package, and adds the following:
 ```javascript
-"plugins": ["react"],
+"plugins": ["react", "react-hooks"],
 
 "env": {
   "browser": true,
